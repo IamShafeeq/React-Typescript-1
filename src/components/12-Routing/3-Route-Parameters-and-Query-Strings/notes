@@ -1,0 +1,8 @@
+# Create project
+npm create vite@latest react-routing-demo -- --template react-ts
+
+# Move into project folder
+cd react-routing-demo
+
+# Install dependencies
+npm install react-router-dom

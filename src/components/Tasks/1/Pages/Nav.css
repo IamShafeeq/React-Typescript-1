@@ -1,0 +1,30 @@
+/* Style the main navigation bar container */
+.navbar {
+  background-color: #f0f0f0;   /* light gray background */
+  padding: 10px;               /* space inside the bar */
+}
+
+/* Remove bullets and make links horizontal */
+.navbar ul {
+  list-style: none;            /* remove bullets */
+  margin: 0;                   /* remove margin */
+  padding: 0;                  /* remove padding */
+  display: flex;               /* make list items horizontal */
+  gap: 15px;                   /* space between links */
+  justify-content: center;     /* center horizontally */
+}
+
+/* Style each link */
+.navbar a {
+  text-decoration: none;       /* remove underline */
+  color: #333;                 /* dark text color */
+  font-weight: bold;           /* bold text */
+  padding: 6px 12px;           /* some space around text */
+  border-radius: 4px;          /* rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+/* Add hover effect */
+.navbar a:hover {
+  background-color: #ddd;      /* light gray background on hover */
+}

@@ -1,0 +1,29 @@
+
+Nested and Layout Routes
+
+You’ll learn:
+✅ What nested routes are and why we use them
+✅ How layout routes help us create shared layouts (like navigation bars or side menus)
+✅ How to define nested routes in App.tsx
+✅ How to use <Outlet /> to render child routes
+✅ How to organize nested routes into folders and components
+
+
+1. What are Nested Routes?
+
+Let’s imagine a simple app:
+
+/dashboard
+/dashboard/profile
+/dashboard/settings
+
+
+- All these pages share the same layout — maybe a sidebar and a top navigation bar.
+-Without nested routes, you’d have to repeat the same layout in every component 😩
+- With nested routes, you define a parent route (/dashboard) and inside it, you define child routes (profile, settings).
+
+That way:
+
+The parent component renders the layout (like navbar, sidebar, etc.)
+
+The child component renders the page content inside it
