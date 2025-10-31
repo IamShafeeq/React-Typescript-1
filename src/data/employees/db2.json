@@ -1,0 +1,106 @@
+{
+  "department": [
+    {
+      "id": 1,
+      "deptname": "Human Resource",
+      "location": "London"
+    },
+    {
+      "id": 2,
+      "deptname": "IT",
+      "location": "Manchester"
+    },
+    {
+      "department": "sales",
+      "location": "london",
+      "id": 3
+    },
+    {
+      "department": "sales",
+      "location": "MAnchester",
+      "id": 4
+    },
+    {
+      "deptname": "aaaaaaaaaaaa",
+      "location": "bbbbbbbbbbbbbbb",
+      "id": 5
+    },
+    {
+      "deptname": "Sports DEpartment",
+      "location": "MAnchester",
+      "id": 6
+    },
+    {
+      "deptname": "Purchase DEpartment",
+      "location": "London",
+      "id": 7
+    },
+    {
+      "deptname": "Backup Department",
+      "location": "Manchester",
+      "id": 8
+    },
+    {
+      "deptname": "Running",
+      "location": "London",
+      "id": 9
+    },
+    {
+      "deptname": "treee",
+      "location": "abcabc",
+      "id": 10
+    },
+    {
+      "deptname": "aaaaa",
+      "location": "bbbbbbbb",
+      "id": 11
+    },
+    {
+      "deptname": "2444",
+      "location": "3555",
+      "id": 12
+    },
+    {
+      "deptname": "tttttt",
+      "location": "yyyyyyy",
+      "id": 13
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "deptid": 1,
+      "empno": 2001,
+      "name": "Shafeeq",
+      "salary": 2000
+    },
+    {
+      "id": 2,
+      "deptid": 1,
+      "empno": 2002,
+      "name": "Kames",
+      "salary": 300
+    },
+    {
+      "empno": 5001,
+      "deptid": 2,
+      "name": "Maria",
+      "salary": 15000,
+      "id": 3
+    },
+    {
+      "empno": 5002,
+      "deptid": 2,
+      "name": "MariaA",
+      "salary": 12000,
+      "id": 14
+    },
+    {
+      "empno": 5002,
+      "deptid": 2,
+      "name": "MariaA",
+      "salary": 12000,
+      "id": 15
+    }
+  ]
+}

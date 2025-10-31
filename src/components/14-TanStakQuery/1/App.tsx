@@ -6,8 +6,12 @@ const queryClient = new QueryClient();
 const Main=()=>{
 
   return (
+
       <QueryClientProvider client={queryClient}>
+
+
         <App />
+        
       </QueryClientProvider>
     );
 

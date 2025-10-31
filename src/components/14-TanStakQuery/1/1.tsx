@@ -20,8 +20,18 @@ const fetchSellers = async (): Promise<Seller[]> => {
 };
 
 
+
+
+
+
+
+
+
+
+
 // Component using useQuery
 const Main: React.FC = () => {
+
   const {
     data,
     isLoading,
@@ -31,8 +41,9 @@ const Main: React.FC = () => {
   } = useQuery<Seller[]>({
     queryKey: ["sellers"],
     queryFn: fetchSellers,
-    staleTime: 1000 * 60 * 5, // 5 minutes (optional)
+    //staleTime: 1000 * 60 * 5, // 5 minutes (optional)
   });
+
 
   if (isLoading) return <div>Loading...</div>;
   if (isError)
