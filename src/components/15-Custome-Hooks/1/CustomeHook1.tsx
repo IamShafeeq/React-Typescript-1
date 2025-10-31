@@ -7,6 +7,8 @@ interface UseCounterReturn {
 }
 
 const useCounter = (initValue: number = 1, step: number = 1): UseCounterReturn => {
+
+  
   const [count, setCount] = useState<number>(initValue);
 
   const increment = (): void => {

@@ -2,7 +2,9 @@ import React from "react";
 import useCounter from "./CustomeHook1";
 
 const UseCustomHook1: React.FC = () => {
-  const { count, increment, decrement } = useCounter(2, 100);
+
+  
+  const { count, increment, decrement } = useCounter(102, 100);
 
   return (
     <>

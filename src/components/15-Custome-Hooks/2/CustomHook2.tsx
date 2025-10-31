@@ -1,7 +1,11 @@
+
 import { useState, useEffect } from "react";
 
+
 // Generic custom hook
+
 function useFetch<T>(url: string): [T | null] {
+  
   const [data, setData] = useState<T | null>(null);
 
   useEffect(() => {

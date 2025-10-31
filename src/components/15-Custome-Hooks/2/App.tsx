@@ -8,6 +8,9 @@ interface Todo {
   completed: boolean;
 }
 
+
+
+
 const UseCustomHook1: React.FC = () => {
   const [data] = useFetch<Todo[]>("https://jsonplaceholder.typicode.com/todos");
 
