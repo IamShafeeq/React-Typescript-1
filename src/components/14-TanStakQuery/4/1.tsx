@@ -13,6 +13,18 @@ interface Seller {
   surname: string;
 }
 
+const saveSeller = async (newSeller: Seller): Promise<Seller> => {
+  const res = await fetch("http://localhost:3000/seller", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(newSeller),
+  });
+  if (!res.ok) {
+    throw new Error("Failed to save new seller");
+  }
+  return res.json();
+};
+
 const AppComponent1: React.FC = () => {
   //  Access the QueryClient instance
   const queryClient = useQueryClient();
@@ -25,23 +37,8 @@ const AppComponent1: React.FC = () => {
     error,
     isSuccess,
   } = useMutation<Seller, Error, Seller>({
-    mutationFn: async (newSeller: Seller): Promise<Seller> => {
-      const res = await fetch("http://localhost:3000/seller", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newSeller),
-      });
-
-      if (!res.ok) {
-        throw new Error("Failed to save new seller");
-      }
-
-      //  Important: Call `res.json()` (not just reference it)
-      return res.json();
-    },
-
-    //  Automatically refetch sellers list after success
-    onSuccess: () => {
+      mutationFn: saveSeller,
+      onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["sellers1"] });
     },
   });

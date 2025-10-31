@@ -12,6 +12,17 @@ interface Seller {
   surname: string;
 }
 
+const saveSeller = async (newSeller: Seller): Promise<Seller> => {
+  const res = await fetch("http://localhost:3000/seller", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(newSeller),
+  });
+  if (!res.ok) {
+    throw new Error("Failed to save new seller");
+  }
+  return res.json();
+};
 
 const AppComponent1: React.FC = () => {
   //useMutation with TypeScript generic type
@@ -22,20 +33,7 @@ const AppComponent1: React.FC = () => {
     error,
     isSuccess,
   } = useMutation<Seller, Error, Seller>({
-    // mutationFn is required and must return a Promise
-    mutationFn: async (newSeller: Seller): Promise<Seller> => {
-      const res = await fetch("http://localhost:3000/seller", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newSeller),
-      });
-
-      if (!res.ok) {
-        throw new Error("Failed to save new seller");
-      }
-
-      return res.json();
-    },
+      mutationFn: saveSeller,
   });
 
   if (isPending) {

@@ -7,7 +7,9 @@ const Main=()=>{
 
   return (
       <QueryClientProvider client={queryClient}>
+        
         <App />
+        
       </QueryClientProvider>
     );
 

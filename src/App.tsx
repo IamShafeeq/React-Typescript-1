@@ -32,7 +32,7 @@
 //import App1 from   "./components/12-Routing/6-Loaders/4/App"
 //import App1 from   "./components/12-Routing/7-Actions/1/App"
 //import App1 from   "./components/Tasks/2-Protected-Routes/App"
- //import App1 from   "./components/Tasks/2-Protected-Routes/App"
+// import App1 from   "./components/Tasks/2-Protected-Routes/App"
 //import App1 from   "./components/13-Redux/1/App"
 import App1 from   "./components/14-TanStakQuery/1/App"
 //import App1 from   "./components/14-TanStakQuery/2/App"

@@ -11,19 +11,20 @@ interface Seller {
   surname: string;
 }
 
+const fetchSellers = async (): Promise<Seller[]> => {
+  const res = await fetch("http://localhost:3000/seller");
+  if (!res.ok) {
+    throw new Error("Network response was not ok");
+  }
+  return res.json();
+};
 
 const AppComponent1: React.FC = () => {
 // useQuery with TypeScript generics
   const { data, isLoading, isError, refetch } = useQuery<Seller[]>({
     queryKey: ["sellers1"],
     enabled: false, // the query won't execute automatically
-    queryFn: async (): Promise<Seller[]> => {
-      const res = await fetch("http://localhost:3000/seller");
-      if (!res.ok) {
-        throw new Error("Failed to fetch sellers");
-      }
-      return res.json();
-    },
+    queryFn: fetchSellers
   });
 
   if (isLoading) {
@@ -36,7 +37,7 @@ const AppComponent1: React.FC = () => {
 
   return (
     <div>
-      <h1>TanStack Query - Fetching Data (Manual Trigger)</h1>
+      <h2>TanStack Query - Fetching Data (Manual Trigger)</h2>
 
       <button onClick={() => refetch()}>Fetch Data</button>
 
